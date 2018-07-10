@@ -54,7 +54,7 @@ class Calculator extends Component {
         replaced[replaced.length - 1]
       );
       this.setState(prevState => ({
-        display: math.eval(replaced)
+        display: (Math.round(math.eval(replaced)*10000)/10000)
       }));
     }
   };
